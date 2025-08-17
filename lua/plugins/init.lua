@@ -51,4 +51,12 @@ return {
       })
     end,
   },
+
+  {
+    "rmagatti/auto-session",
+    lazy = false,
+    opts = {
+      suppressed_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
+    },
+  },
 }
