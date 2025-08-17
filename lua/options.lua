@@ -1,5 +1,7 @@
 require "nvchad.options"
 
-local o = vim.o
-o.cursorlineopt ='both' -- to enable cursorline!
+vim.opt.cursorlineopt ='both' -- to enable cursorline!
+
+vim.opt.colorcolumn = "140"  -- Show vertical line at column 140
+vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#3a3a3a" })  -- Slightly darker than background
 
