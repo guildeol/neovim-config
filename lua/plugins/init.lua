@@ -34,6 +34,7 @@ return {
   	},
   },
 
+  -- Neotest
   {
     "nvim-neotest/neotest",
     dependencies = {
@@ -52,6 +53,7 @@ return {
     end,
   },
 
+  -- Auto Session
   {
     "rmagatti/auto-session",
     lazy = false,

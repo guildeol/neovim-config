@@ -22,3 +22,20 @@ auto_session.setup({
 	pre_save_cmds = { "NvimTreeClose" },
 })
 
+nvim_tree.setup({
+  filters = {
+    dotfiles = false,  -- Show dotfiles (including .gitignore)
+    git_ignored = false,  -- Show git ignored files
+    custom = {
+      -- Hide specific files/directories
+      ".pytest_cache",
+      "__pycache__",
+      ".git",
+    },
+  },
+  git = {
+    enable = true,
+    ignore = false,  -- Don't hide git ignored files
+  },
+})
+
