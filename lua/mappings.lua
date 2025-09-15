@@ -15,7 +15,6 @@ map("n", "<leader>ts", function() neotest.summary.toggle() end, { desc = "Toggle
 map("n", "<leader>to", function() neotest.output.open({ enter = true }) end, { desc = "Open test output" })
 
 -- Telescope mappings
-map("n", "<C-\\>s", telescope.lsp_references, { desc = "Find references to symbol under cursor"})
 map("n", "<C-\\>s", telescope.lsp_references, { desc = "Find references to symbol under cursor" })
 map("n", "<C-\\>i", telescope.lsp_incoming_calls, { desc = "Find incoming calls for symbol under cursor" })
 map("n", "<C-\\>o", telescope.lsp_outgoing_calls, { desc = "Find outgoing calls for symbol under cursor" })

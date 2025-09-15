@@ -10,28 +10,26 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        "clangd"
-      }
-    }
-  },
-
-  -- LSP config
-  {
-    "neovim/nvim-lspconfig",
-    config = function()
-      require "configs.lspconfig"
-    end,
+        "clangd",
+        "rust-analyzer",
+        "python-lsp-server",
+        "lua_ls",
+      },
+    },
   },
 
   -- Treesitter
   {
-  	"nvim-treesitter/nvim-treesitter",
-  	opts = {
-  		ensure_installed = {
-  		  "vim", "lua", "vimdoc",
-        "html", "css", "cpp"
-  		},
-  	},
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "cpp",
+        "rust",
+      },
+    },
   },
 
   -- Neotest
@@ -42,14 +40,14 @@ return {
       "nvim-lua/plenary.nvim",
       "antoinemadec/FixCursorHold.nvim",
       "nvim-treesitter/nvim-treesitter",
-      "alfaix/neotest-gtest"
+      "alfaix/neotest-gtest",
     },
     config = function()
-      require("neotest").setup({
+      require("neotest").setup {
         adapters = {
-          require("neotest-gtest").setup({})
-        }
-      })
+          require("neotest-gtest").setup {},
+        },
+      }
     end,
   },
 
@@ -60,5 +58,12 @@ return {
     opts = {
       suppressed_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
     },
+  },
+
+  -- Extra rust stuff
+  {
+    "mrcjkb/rustaceanvim",
+    version = "^4", -- Recommended
+    lazy = false, -- This plugin is already lazy
   },
 }
